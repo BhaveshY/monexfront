@@ -2,12 +2,23 @@ import React, { useEffect, useState } from "react";
 import { Box, HStack, Text, Button, Image, VStack, Pressable } from "native-base";
 import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
 import { StyleSheet } from "react-native";
-import { getStore } from "../libraries/store";
+import { getStore,removeStore } from "../libraries/store";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 function Profile({ navigation }) {
   var [email, setEmail] = useState(null);
   var [isEmailLoaded, setIsEmailLoaded] = useState(false);
   var [avatar, setAvatar] = useState(null);
+
+   function logout(){
+    auth.signOut().then(async (signOutResult)=>{
+      await removeStore('userLoggedIn')
+      await removeStore('user')
+      navigation.navigate('Login')
+    })
+
+  }
   
   useEffect(() => {
     async function fetchEmail() {
@@ -43,7 +54,7 @@ function Profile({ navigation }) {
       </Box> 
 
 
-      <Button variant="unstyled" style={styles.logoutButton}><Text fontSize={'16px'} fontWeight={500}>Logout</Text></Button>
+      <Button variant="unstyled" onPress={logout} style={styles.logoutButton}><Text fontSize={'16px'} fontWeight={500}>Logout</Text></Button>
     </Box>
   );
 }

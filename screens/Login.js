@@ -50,7 +50,8 @@ export default function Login({ navigation }) {
                   placeholder="Email"
                 />
                 <Box mt="2px" fontSize="sm" color="red.400">
-                  <ErrorMessage name="email" />
+                  
+                  <ErrorMessage name="email">{ msg => <Text>{msg}</Text> }</ErrorMessage>
                 </Box>
               </Box>
 
@@ -78,7 +79,7 @@ export default function Login({ navigation }) {
                   placeholder="Password"
                 />
                 <Box mt="2px" fontSize="sm" color="red.400">
-                  <ErrorMessage name="password" />
+                  <ErrorMessage name="password">{ msg => <Text>{msg}</Text> }</ErrorMessage>
                 </Box>
               </Box>
 
