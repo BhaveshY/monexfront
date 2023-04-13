@@ -35,6 +35,7 @@ import Registration from "./screens/Registration";
 import Splash from "./screens/Splash";
 import Transactions from "./screens/Transactions";
 import TransactionDetails from "./screens/TransactionDetails";
+import Analytics from "./screens/Analytics";
 import Menu from "./screens/Menu";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
@@ -77,7 +78,7 @@ const HomeTabs = () => {
     <Tab.Navigator initialRouteName="Home" barStyle={styles.barStyle} >
       <Tab.Screen name="Home" component={Home} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="home"/>),}} />
       <Tab.Screen name="Budget" component={Menu} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="payment"/>),}} />
-      <Tab.Screen name="Analytics" component={Transactions} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="analytics"/>),}} />
+      <Tab.Screen name="Analytics" component={Analytics} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="analytics"/>),}} />
       <Tab.Screen name="Menu" component={Menu} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="menu"/>),}} />
     </Tab.Navigator>
   );
