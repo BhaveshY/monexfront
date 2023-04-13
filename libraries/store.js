@@ -11,7 +11,8 @@ const removeStore = async (key) => {
 }
 
 const setStore = async (key, value) => {
-    if (typeof value == 'object') value = JSON.stringify(value)
+    // if (typeof value == 'object') value = JSON.stringify(value)
+    value = JSON.stringify(value)
     console.log(value)
     await AsyncStorage.setItem(key, value)
 }
