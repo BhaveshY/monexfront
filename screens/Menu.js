@@ -35,7 +35,7 @@ function Profile({ navigation }) {
   return (
     <Box backgroundColor="white" h="100%" display="flex">
       <HStack style={styles.profileSection}>
-        <Image size={49} borderRadius={100} source={profileImage}></Image>
+        <Image size={49} borderRadius={100} source={profileImage} alt="User Profile Image"></Image>
         <VStack style={styles.profileDetailStack}>
           <Text style={styles.userName}>Vipul Patil</Text>
           <Text style={styles.userEmail}>{email}</Text>
