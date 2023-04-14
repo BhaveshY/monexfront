@@ -52,6 +52,9 @@ export default function Analytics({navigation}) {
           <VictoryChart width={350} theme={VictoryTheme.material}>
             <VictoryBar data={data} x="quarter" y="earnings" />
           </VictoryChart>
+          <Text fontSize={'19px'} marginLeft="-3">
+            Analytics
+          </Text>
           <VictoryChart>
             <VictoryLine
               style={{
@@ -60,6 +63,9 @@ export default function Analytics({navigation}) {
               }}
             />
           </VictoryChart>
+          <Text fontSize={'19px'} marginLeft="-3">
+            Line Graph
+          </Text>
           <VictoryPie
             data={[
               {x: 'Cats', y: 35},
@@ -67,6 +73,9 @@ export default function Analytics({navigation}) {
               {x: 'Birds', y: 55},
             ]}
           />
+          <Text fontSize={'19px'} marginLeft="-3">
+            Pie Chart
+          </Text>
         </View>
       </Box>
     </ScrollView>
@@ -77,6 +86,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5fcff',
+    marginLeft: 20,
+    // backgroundColor: '#f5fcff',
   },
 });
