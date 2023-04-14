@@ -48,6 +48,17 @@ export default function Analytics({navigation}) {
             Analytics
           </Text>
         </HStack>
+        <HStack justifyContent="space-between">
+          <Button size="sm" variant="subtle" width="100">
+            Week
+          </Button>
+          <Button size="sm" variant="subtle" width="100">
+            Month
+          </Button>
+          <Button size="sm" variant="subtle" width="100">
+            All Time
+          </Button>
+        </HStack>
         <View style={styles.container}>
           <VictoryChart width={350} theme={VictoryTheme.material}>
             <VictoryBar data={data} x="quarter" y="earnings" />
