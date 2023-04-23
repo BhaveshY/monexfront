@@ -35,6 +35,7 @@ import Registration from "./screens/Registration";
 import Splash from "./screens/Splash";
 import Transactions from "./screens/Transactions";
 import TransactionDetails from "./screens/TransactionDetails";
+import EditProfile from "./screens/EditProfile";
 import Analytics from "./screens/Analytics";
 import Budget from "./screens/Budget";
 import Menu from "./screens/Menu";
@@ -104,6 +105,7 @@ function App(): JSX.Element {
           <Stack.Screen name="AddTransaction" component={AddTransaction}/>
           <Stack.Screen name="Transactions" component={Transactions}/>
           <Stack.Screen name="TransactionDetails" component={TransactionDetails}/>
+          <Stack.Screen name="EditProfile" component={EditProfile}/>
         </Stack.Navigator>
       </NativeBaseProvider>
     </NavigationContainer>
