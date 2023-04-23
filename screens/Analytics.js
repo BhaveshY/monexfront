@@ -25,12 +25,6 @@ import {
   VictoryPie,
 } from 'victory-native';
 
-const data = [
-  { quarter: 1, earnings: 13000 },
-  { quarter: 2, earnings: 16500 },
-  { quarter: 3, earnings: 14250 },
-  { quarter: 4, earnings: 19000 },
-];
 
 export default function Analytics({ navigation }) {
 
@@ -45,18 +39,7 @@ export default function Analytics({ navigation }) {
 
   const [barData, setBarData] = useState([])
 
-  const [lineData, setLineData] = useState([
-    { x: '1st', y: 1300 },
-    { x: '2nd', y: 1200 },
-    { x: '3rd', y: 1200 },
-    { x: '4th', y: 1400 },
-    { x: '5th', y: 1200 },
-    { x: '6th', y: 1300 },
-    { x: '7th', y: 1400 },
-    { x: '8th', y: 1500 },
-    { x: '9th', y: 1100 },
-    { x: '10th', y: 1200 },
-  ])
+  const [lineData, setLineData] = useState([])
 
   const [pieData, setPieData] = useState([])
 
@@ -101,9 +84,9 @@ export default function Analytics({ navigation }) {
 
       var currentDate = moment();
       var currentWeekDay = currentDate.day()
-
-      var weekStart = currentDate.clone().subtract(currentWeekDay-1,'days')
-      console.log(currentDate,currentWeekDay, weekStart)
+     
+      var weekStart = currentDate.clone().subtract(currentWeekDay==0?6: currentWeekDay-1,'days')
+      console.log(currentDate,currentWeekDay, weekStart,"new")
 
       let tempLineData = {}
       transactions.map((transaction)=>{
