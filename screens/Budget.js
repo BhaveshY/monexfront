@@ -50,14 +50,10 @@ export default function Home({navigation}) {
 }
 const styles = StyleSheet.create({
   container: {
-    height: 300,
-    width: 350,
+    flex: 1,
     marginTop: 20,
   },
-
   webview: {
-    flex: 1,
-
-    borderRadius: 4,
+    borderRadius: 1,
   },
 });
