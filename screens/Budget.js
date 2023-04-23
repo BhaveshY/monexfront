@@ -31,7 +31,7 @@ export default function Home({navigation}) {
           <ChevronLeftIcon></ChevronLeftIcon>
         </Button>
         <Text fontSize={'20px'} marginLeft="24px">
-          Budget
+          Assistant
         </Text>
       </HStack>
       <View style={styles.container}>
