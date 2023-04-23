@@ -78,7 +78,7 @@ const HomeTabs = () => {
   return (
     <Tab.Navigator initialRouteName="Home" barStyle={styles.barStyle} >
       <Tab.Screen name="Home" component={Home} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="home"/>),}} />
-      <Tab.Screen name="Budget" component={Budget} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="payment"/>),}} />
+      <Tab.Screen name="Assistant" component={Budget} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="payment"/>),}} />
       <Tab.Screen name="Analytics" component={Analytics} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="analytics"/>),}} />
       <Tab.Screen name="Menu" component={Menu} options={{tabBarIcon: ({ focused }) => (<MaterialIcons style={[focused?styles.focusedBottomIcon:styles.unfocusedBottomIcon,]} size={24} name="menu"/>),}} />
     </Tab.Navigator>
