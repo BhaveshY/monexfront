@@ -85,7 +85,7 @@ export default function Analytics({ navigation }) {
       var currentDate = moment();
       var currentWeekDay = currentDate.day()
      
-      var weekStart = currentDate.clone().subtract(currentWeekDay==0?6: currentWeekDay-1,'days')
+      var weekStart = currentDate.clone().subtract(7,'days')
       console.log(currentDate,currentWeekDay, weekStart,"new")
 
       let tempLineData = {}
@@ -113,11 +113,12 @@ export default function Analytics({ navigation }) {
     }
   }
 
-  useEffect(() => {
+  useFocusEffect(useCallback(()=>{
     if(!transactions) loadTransactions()
     console.log('Time range updated', timeRange)
     processData()
-  }, [timeRange])
+  },[timeRange]))
+
 
   return (
     <Box bg="#fff" h="100%" padding="24px">
