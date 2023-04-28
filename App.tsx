@@ -41,6 +41,7 @@ import Budget from "./screens/Budget";
 import Menu from "./screens/Menu";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialIcons from "react-native-vector-icons/dist/MaterialIcons";
+import EditTransaction from './screens/EditTransaction';
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -106,6 +107,7 @@ function App(): JSX.Element {
           <Stack.Screen name="Transactions" component={Transactions}/>
           <Stack.Screen name="TransactionDetails" component={TransactionDetails}/>
           <Stack.Screen name="EditProfile" component={EditProfile}/>
+          <Stack.Screen name="EditTransaction" component={EditTransaction}/>
         </Stack.Navigator>
       </NativeBaseProvider>
     </NavigationContainer>
